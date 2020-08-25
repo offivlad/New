@@ -1,5 +1,5 @@
 "use strict";
-let sex = confirm('Do you have 18+ ?');
+let sex = confirm('Do you have 21+ ?');
 if (sex == true){
     let name = prompt('You name ?', '');
     alert (`Hello, ${name} !`);
