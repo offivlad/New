@@ -1,23 +1,45 @@
 "use strict";
-let numberOfFilms = prompt("How much films do you seen ?","");
+do{
+    var numberOfFilms = prompt("How much films do you seen ?","");
+}
+while(numberOfFilms==null || numberOfFilms.length>10){
+}
 
-let personalMovieDB = {
-    count: numberOfFilms,
+var personalMovieDB = {
+    count: +numberOfFilms,
     movis: {},
     actors: {},
     genres: [],
     privat: false
 }
 
-let LastFilm = prompt("One of the las seeing films ?","");
-let MarkFilm = prompt("How mark you give about this film ?","");
-let LastFilm2 = prompt("One of the las seeing films ?","");
-let MarkFilm2 = prompt("How mark you give about this film ?","");
-  
+for(var i=0;i<2;i++){
+  do{
+    var LastFilm = prompt("One of the las seeing films ?","");
+} 
+
+  while(LastFilm== null ||  LastFilm== ""||  LastFilm.length>10 ){
+}
+do{
+    var MarkFilm = prompt("How mark you give about this film ?","");    
+} 
+
+  while( MarkFilm== null ||  MarkFilm== "" ||  MarkFilm.length>10){
+}
+
 personalMovieDB.movis[LastFilm] = MarkFilm;
-personalMovieDB.movis[LastFilm2] = MarkFilm2;
+}
 
 console.log(personalMovieDB);
+if(personalMovieDB.count<10){
+    alert('You have seen few films');
+}
+else if(personalMovieDB.count>=10 && personalMovieDB.count<=30){
+    alert('You are a classic cinema viewer');
+}
+else{
+    alert('You are film fan');
+}
 
 // alert(personalMovieDB.movis.LastFilm);
 // alert(personalMovieDB.movis.MarkFilm);
