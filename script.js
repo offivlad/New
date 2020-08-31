@@ -1,3 +1,10 @@
+function calc(a, b){
+    return (a+b);
+}
+console.log(calc(3, 5));
+
+/*
+// practika2
 "use strict";
 do{
     var numberOfFilms = prompt("How much films do you seen ?","");
@@ -40,7 +47,7 @@ else if(personalMovieDB.count>=10 && personalMovieDB.count<=30){
 else{
     alert('You are film fan');
 }
-
+*\
 // alert(personalMovieDB.movis.LastFilm);
 // alert(personalMovieDB.movis.MarkFilm);
 // let sex = confirm('Do you have 18+ ?');
