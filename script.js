@@ -1,5 +1,5 @@
 
-const str = "test";
+const str = "tests";
 console.log (str.toUpperCase());
 console.log (str);
 
