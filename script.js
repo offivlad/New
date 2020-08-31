@@ -1,4 +1,6 @@
 
+/*
+// методы и свойства
 const str = "tests";
 console.log (str.toUpperCase());
 console.log (str);
@@ -20,6 +22,8 @@ console.log(Math.round(num));
 const test = "12.2px";
 console.log(parseInt(test));
 console.log(parseFloat(test));
+*/
+
 /*
 // function declaration
 function calc(a, b){
@@ -35,14 +39,25 @@ const logger = function(){
 // стрелочная function
 const calk = (a, b) => a + b;
 */
-/*
+
 // practika2
-"use strict";
-do{
+'use strict';
+/*do{
     var numberOfFilms = prompt("How much films do you seen ?","");
 }
 while(numberOfFilms==null || numberOfFilms.length>10){
 }
+*/
+let numberOfFilms;
+
+function start(){
+    numberOfFilms = +prompt("How much films do you seen ?","");
+
+    while(numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms)){
+        numberOfFilms = +prompt("How much films do you seen ?","");
+    }
+}
+start();
 
 var personalMovieDB = {
     count: +numberOfFilms,
@@ -52,34 +67,59 @@ var personalMovieDB = {
     privat: false
 }
 
-for(var i=0;i<2;i++){
-  do{
-    var LastFilm = prompt("One of the las seeing films ?","");
-} 
+function rememberMyFilms(){
+    for(var i=0;i<2;i++){
+        do{
+          var LastFilm = prompt("One of the las seeing films ?","");
+      } 
+      
+        while(LastFilm== null ||  LastFilm== ""||  LastFilm.length>10 ){
+      }
+      do{
+          var MarkFilm = prompt("How mark you give about this film ?","");    
+      } 
+      
+        while( MarkFilm== null ||  MarkFilm== "" ||  MarkFilm.length>10){
+      }
+      
+      personalMovieDB.movis[LastFilm] = MarkFilm;
+      }
+      
+}
 
-  while(LastFilm== null ||  LastFilm== ""||  LastFilm.length>10 ){
-}
-do{
-    var MarkFilm = prompt("How mark you give about this film ?","");    
-} 
+rememberMyFilms();
 
-  while( MarkFilm== null ||  MarkFilm== "" ||  MarkFilm.length>10){
+function detectPersonallevel(){
+    if(personalMovieDB.count<10){
+        alert('You have seen few films');
+    }
+    else if(personalMovieDB.count>=10 && personalMovieDB.count<=30){
+        alert('You are a classic cinema viewer');
+    }
+    else{
+        alert('You are film fan');
+    }
 }
 
-personalMovieDB.movis[LastFilm] = MarkFilm;
+detectPersonallevel();
+
+function writeYourGeneres(){
+    for(var i = 1; i<4 ;i++){
+    var j = prompt(`Your favorite genre by number ${i}`,);
+    personalMovieDB.genres[i] = j;
+    }
 }
 
-console.log(personalMovieDB);
-if(personalMovieDB.count<10){
-    alert('You have seen few films');
+writeYourGeneres();
+
+function showMyDB(){
+    if(personalMovieDB.privat == false){
+        console.log(personalMovieDB);
+    }
 }
-else if(personalMovieDB.count>=10 && personalMovieDB.count<=30){
-    alert('You are a classic cinema viewer');
-}
-else{
-    alert('You are film fan');
-}
-*/
+
+showMyDB();
+
 // alert(personalMovieDB.movis.LastFilm);
 // alert(personalMovieDB.movis.MarkFilm);
 // let sex = confirm('Do you have 18+ ?');
