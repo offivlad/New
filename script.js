@@ -1,8 +1,40 @@
+
+const str = "test";
+console.log (str.toUpperCase());
+console.log (str);
+
+const fruit = "Some fruit";
+console.log(fruit.indexOf("q"));
+
+const logg = "Hello word";
+
+console.log(logg.slice(6, 11));
+
+console.log(logg.slice(6));
+
+console.log(logg.substr(6, 5));
+
+const num = 12.5;
+console.log(Math.round(num));
+ 
+const test = "12.2px";
+console.log(parseInt(test));
+console.log(parseFloat(test));
+/*
+// function declaration
 function calc(a, b){
     return (a+b);
 }
-console.log(calc(3, 5));
-
+let a =+prompt("");
+let b =+prompt("");
+alert(calc(a,b));
+// function expression
+const logger = function(){
+    console.log("Hello");
+};
+// стрелочная function
+const calk = (a, b) => a + b;
+*/
 /*
 // practika2
 "use strict";
@@ -47,7 +79,7 @@ else if(personalMovieDB.count>=10 && personalMovieDB.count<=30){
 else{
     alert('You are film fan');
 }
-*\
+*/
 // alert(personalMovieDB.movis.LastFilm);
 // alert(personalMovieDB.movis.MarkFilm);
 // let sex = confirm('Do you have 18+ ?');
@@ -84,4 +116,3 @@ else{
 //   console.log(x);
 // let x=3;
 //   alert (x);
-
